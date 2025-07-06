@@ -46,8 +46,8 @@ data "aws_key_pair" "server_key" {
 
 # AWS EC2 Instance Resource: Windows Server
 resource "aws_instance" "windows_server_01" {
-  ami           = "ami-02b60b5095d1e5227"
-  instance_type = "t3.medium"
+  ami           = "ami-02b60b5095d1e5227" # default AMI ID
+  instance_type = "t3.medium" # default instance type
   key_name      = data.aws_key_pair.server_key.key_name
   vpc_security_group_ids = [aws_security_group.common_server_sg.id]
   user_data = <<-EOF
