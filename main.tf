@@ -41,7 +41,7 @@ resource "aws_security_group" "common_server_sg" {
 
 # AWS Key Pair Data Source
 data "aws_key_pair" "server_key" {
-  key_name = "al23-key-terraform"
+  key_name = "ENTER KEY NAME HERE"
 }
 
 # AWS EC2 Instance Resource: Windows Server
